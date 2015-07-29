@@ -1,0 +1,20 @@
+﻿<h3>LandingSubscription</h3>
+<p class="Contributor">
+	3Gmotion <br />
+	<a href="mailto:jvillaseca@3gmotion.com">jvillaseca@3gmotion.com</a><br />
+	<a href=http://www.3gmotion.com>http://www.3gmotion.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About SubscripionValidation</h3>
+	<p class="Owner">
+		<b>Version 00.01.01</b><br /><br />
+	</p>
+	<p>Release inicial</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li>No</li>
+	</ul>
+	
+</div>
