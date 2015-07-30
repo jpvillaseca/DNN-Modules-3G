@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscriptionValidation", "SubscriptionValidation.csproj", "{7D61A32C-0F21-453F-A981-BD8E5A3A5304}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{AB5DF77D-64B6-4861-A89C-8BB10CD4831F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{5EE0932B-FEDE-4FE6-A00A-44E01C747669}"
 	ProjectSection(SolutionItems) = preProject
 		Build.proj = Build.proj
 		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
 		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandingSubscription", "LandingSubscription\LandingSubscription.csproj", "{459257A3-BED2-4CB9-9442-B74A7001C64F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscriptionValidation", "SubscriptionValidation\SubscriptionValidation.csproj", "{7D61A32C-0F21-453F-A981-BD8E5A3A5304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{459257A3-BED2-4CB9-9442-B74A7001C64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459257A3-BED2-4CB9-9442-B74A7001C64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459257A3-BED2-4CB9-9442-B74A7001C64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459257A3-BED2-4CB9-9442-B74A7001C64F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Release|Any CPU.ActiveCfg = Release|Any CPU
