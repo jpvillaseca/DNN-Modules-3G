@@ -112,24 +112,27 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BasicSettings.Text" xml:space="preserve">
+    <value>Configuración de la suscripción</value>
+  </data>
   <data name="ControlTitle_settings.Text" xml:space="preserve">
-    <value>SubscriptionValidation Settings</value>
+    <value>Configuración del módulo de validación de suscripción</value>
   </data>
-  <data name="lblSetting1.Help" xml:space="preserve">
-    <value>Put your value for Setting 1 here.</value>
+  <data name="lblRedirectAddress.Help" xml:space="preserve">
+    <value>Dirección de redirección en caso de no estar suscrito</value>
   </data>
-  <data name="lblSetting1.Text" xml:space="preserve">
-    <value>Setting One</value>
+  <data name="lblRedirectAddress.Text" xml:space="preserve">
+    <value>Redirección</value>
   </data>
-  <data name="lblSetting2.Help" xml:space="preserve">
-    <value>Put your value for Setting 2 here.</value>
+  <data name="lblSubscriptionLists.Help" xml:space="preserve">
+    <value>Listas a validar de suscripción separadas por coma (1337,2014,...)</value>
   </data>
-  <data name="lblSetting2.Text" xml:space="preserve">
-    <value>Setting Two</value>
+  <data name="lblSubscriptionLists.Text" xml:space="preserve">
+    <value>Listas de suscripción</value>
   </data>
 </root>

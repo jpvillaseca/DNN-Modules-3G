@@ -12,11 +12,14 @@
 
 using System;
 using DotNetNuke.Entities.Modules;
+using System.Collections;
 
 namespace Christoc.Modules.SubscriptionValidation
 {
     public class SubscriptionValidationModuleBase : PortalModuleBase
     {
+        public Hashtable TabModuleSettings { get { return base.ModuleConfiguration.TabModuleSettings; } }
+
         public int ItemId
         {
             get

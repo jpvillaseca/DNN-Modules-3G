@@ -1,18 +1,21 @@
-﻿using System;
+﻿using Christoc.Modules.SubscriptionValidation.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace Christoc.Modules.SubscriptionValidation.Components
 {
     public class SubscriptionModel
     {
-        public SubscriptionModel()
+        public SubscriptionModel(string phone = "", List<int> products = null)
         {
-            this.SubscriptionLists = new List<int>();
+            this.SubscriptionLists = products ?? new List<int>();
+            PhoneNumber = phone;
         }
 
-        public string RedirectAddress { get; set; }
+        public string PhoneNumber { get; set; }
 
         public List<int> SubscriptionLists { get; set; }
 
@@ -37,6 +40,14 @@ namespace Christoc.Modules.SubscriptionValidation.Components
             {
                 return string.Join(",", SubscriptionLists.ToArray());
             }
+        }
+
+        public async Task<bool> IsSubscriptionValid()
+        {
+            if (string.IsNullOrWhiteSpace(this.PhoneNumber))
+                return false;
+
+            return await SubscriptionValidationService.ValidateUserSubscriptionAsync(this);
         }
     }
 }

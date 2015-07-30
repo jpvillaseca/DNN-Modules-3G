@@ -14,6 +14,9 @@ using System;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Exceptions;
 using Christoc.Modules.SubscriptionValidation.Components;
+using DotNetNuke.Entities.Tabs;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Christoc.Modules.SubscriptionValidation
 {
@@ -39,6 +42,8 @@ namespace Christoc.Modules.SubscriptionValidation
     /// -----------------------------------------------------------------------------
     public partial class Settings : SubscriptionValidationModuleSettingsBase
     {
+        public List<TabInfo> Tabs { get; set; }
+
         #region Base Method Implementations
 
         /// -----------------------------------------------------------------------------
@@ -52,9 +57,18 @@ namespace Christoc.Modules.SubscriptionValidation
             {
                 if (Page.IsPostBack == false)
                 {
-                    txtRedirectAddress.Text = Settings.Contains(SettingNames.RedirectAddress) ? Settings[SettingNames.RedirectAddress].ToString() : string.Empty;
+                    //txtRedirectAddress.Text = TabModuleSettings.Contains(SettingNames.RedirectAddress) ? TabModuleSettings[SettingNames.RedirectAddress].ToString() : string.Empty;
 
-                    txtSubscriptionLists.Text = Settings.Contains(SettingNames.SubscriptionLists) ? Settings[SettingNames.SubscriptionLists].ToString() : string.Empty;
+                    var redirectPage = TabModuleSettings.Contains(SettingNames.RedirectAddress) ? TabModuleSettings[SettingNames.RedirectAddress].ToString() : string.Empty;
+
+                    txtSubscriptionLists.Text = TabModuleSettings.Contains(SettingNames.SubscriptionLists) ? TabModuleSettings[SettingNames.SubscriptionLists].ToString() : string.Empty;
+
+                    Tabs = TabController.GetTabsByParent(-1, PortalId).OrderBy(p => p.TabName).ToList();
+
+                    pageDropDown.DataSource = Tabs;
+                    pageDropDown.DataBind();
+
+                    pageDropDown.SelectedIndex = Tabs.IndexOf(Tabs.FirstOrDefault(t => t.TabID.ToString() == redirectPage)??Tabs.First());
 
                     //Check for existing settings and use those on this page
                     //Settings["SettingName"]
@@ -94,7 +108,7 @@ namespace Christoc.Modules.SubscriptionValidation
 
                 //tab module settings
 
-                modules.UpdateTabModuleSetting(TabModuleId, SettingNames.RedirectAddress, txtRedirectAddress.Text);
+                modules.UpdateTabModuleSetting(TabModuleId, SettingNames.RedirectAddress, pageDropDown.SelectedValue);
                 modules.UpdateTabModuleSetting(TabModuleId, SettingNames.SubscriptionLists, txtSubscriptionLists.Text);
             }
             catch (Exception exc) //Module failed to load

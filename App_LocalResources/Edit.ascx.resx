@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BasicSettings.Text" xml:space="preserve">
+    <value>SubscriptionValidation Item Basic Settings</value>
+  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -124,7 +127,10 @@
     <value>Save</value>
   </data>
   <data name="ControlTitle_edit.Text" xml:space="preserve">
-    <value>Edit Control for SubscriptionValidation</value>
+    <value>Edit Control for DNNModuleDal2</value>
+  </data>
+  <data name="ExpandAll.Text" xml:space="preserve">
+    <value>Expand All</value>
   </data>
   <data name="lblAssignedUser.Help" xml:space="preserve">
     <value>Choose a user to assign this object to.</value>
@@ -143,11 +149,5 @@
   </data>
   <data name="lblName.Text" xml:space="preserve">
     <value>Name</value>
-  </data>
-  <data name="BasicSettings.Text" xml:space="preserve">
-    <value>SubscriptionValidation Item Basic Settings</value>
-  </data>
-  <data name="ExpandAll.Text" xml:space="preserve">
-    <value>Expand All</value>
   </data>
 </root>

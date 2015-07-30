@@ -19,6 +19,8 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.UI.Utilities;
+using Christoc.Modules.SubscriptionValidation.Services;
+using System.Threading.Tasks;
 
 namespace Christoc.Modules.SubscriptionValidation
 {
@@ -41,18 +43,19 @@ namespace Christoc.Modules.SubscriptionValidation
         {
             try
             {
+                //Is administrator, or normal user?
                 if (DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(this.ModuleConfiguration))
                 {
                     dnnView.Visible = true;
-                    notSavedWarning.Visible = !Settings.ContainsKey(SettingNames.RedirectAddress);
-                    lblRedirect.Text = Settings.ContainsKey(SettingNames.RedirectAddress) ? Settings[SettingNames.RedirectAddress].ToString() + (Settings.ContainsKey(SettingNames.SubscriptionLists) ? " (" + Settings[SettingNames.SubscriptionLists].ToString() : string.Empty) + ")" : string.Empty;
+                    notSavedWarning.Visible = !TabModuleSettings.ContainsKey(SettingNames.RedirectAddress);
+                    lblRedirect.Text = TabModuleSettings.ContainsKey(SettingNames.RedirectAddress) ? TabModuleSettings[SettingNames.RedirectAddress].ToString() + (TabModuleSettings.ContainsKey(SettingNames.SubscriptionLists) ? " (" + TabModuleSettings[SettingNames.SubscriptionLists].ToString() : string.Empty) + ")" : string.Empty;
                 }
-                else if (Settings.ContainsKey(SettingNames.RedirectAddress))
+                else
                 {
                     dnnView.Visible = false;
 
-                    if (!IsSubscriptionValid())
-                        Response.Redirect(Settings[SettingNames.RedirectAddress].ToString(), true);
+                    if (!IsSubscriptionValidAsync().Result)
+                        Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(int.Parse(TabModuleSettings[SettingNames.RedirectAddress].ToString())), true);
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -61,22 +64,32 @@ namespace Christoc.Modules.SubscriptionValidation
             }
         }
 
-        public bool IsSubscriptionValid()
+        public async Task<bool> IsSubscriptionValidAsync()
         {
-            var subscriptionModel = new SubscriptionModel();
-            subscriptionModel.SubscriptionLists = SubscriptionModel.ParseLists(Settings[SettingNames.SubscriptionLists].ToString());
+            //Don't check status if the module is not configured properly
+            if (!TabModuleSettings.Contains(SettingNames.RedirectAddress) || !TabModuleSettings.Contains(SettingNames.SubscriptionLists))
+                return true;
 
-            if (string.IsNullOrWhiteSpace(this.UserInfo.Profile.Telephone))
+            try
             {
-                DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono no es válido", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.YellowWarning);
+                var subscriptionModel = new SubscriptionModel(this.UserInfo.Profile.Telephone, SubscriptionModel.ParseLists(TabModuleSettings[SettingNames.SubscriptionLists].ToString()));
+                
+                if (string.IsNullOrWhiteSpace(this.UserInfo.Profile.Telephone))
+                    return false;
 
-                this.UserInfo.Profile.SetProfileProperty("Telephone", "123");
+                return await SubscriptionValidationService.ValidateUserSubscriptionAsync(subscriptionModel);
+
+                    //DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono no tiene una suscripción válida", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.YellowWarning);
+
+
+                    //this.UserInfo.Profile.SetProfileProperty("Telephone", "123");
+                    //DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono está suscrito OK!", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.GreenSuccess);
+
+
+            }catch(Exception ex)
+            {
+                Exceptions.ProcessModuleLoadException(this, ex);
             }
-            else
-                DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono está OK!", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.GreenSuccess);
-
-
-            return true;
 
             return false;
         }

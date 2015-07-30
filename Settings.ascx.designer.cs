@@ -22,13 +22,13 @@ namespace Christoc.Modules.SubscriptionValidation {
         protected global::DotNetNuke.UI.UserControls.LabelControl lblRedirectAddress;
         
         /// <summary>
-        /// txtRedirectAddress control.
+        /// pageDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRedirectAddress;
+        protected global::System.Web.UI.WebControls.DropDownList pageDropDown;
         
         /// <summary>
         /// lblSubscriptionLists control.
