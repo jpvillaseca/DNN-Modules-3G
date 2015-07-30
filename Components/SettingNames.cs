@@ -9,5 +9,7 @@ namespace Christoc.Modules.SubscriptionValidation.Components
     {
         public static string RedirectAddress { get { return "RedirectAddress"; } }
         public static string SubscriptionLists { get { return "SubscriptionLists"; } }
+
+        public static string ValidationServiceEndpoint { get { return "ValidationServiceEndpoint"; } }
     }
 }

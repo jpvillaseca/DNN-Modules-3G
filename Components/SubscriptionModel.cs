@@ -42,12 +42,12 @@ namespace Christoc.Modules.SubscriptionValidation.Components
             }
         }
 
-        public async Task<bool> IsSubscriptionValid()
+        public async Task<bool> IsSubscriptionValidAsync(SubscriptionValidationService service)
         {
             if (string.IsNullOrWhiteSpace(this.PhoneNumber))
                 return false;
 
-            return await SubscriptionValidationService.ValidateUserSubscriptionAsync(this);
+            return await service.ValidateUserSubscriptionAsync(this);
         }
     }
 }

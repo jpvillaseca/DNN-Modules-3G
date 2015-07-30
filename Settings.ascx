@@ -19,6 +19,10 @@
         <dnn:label ID="lblSubscriptionLists" runat="server" />
         <asp:TextBox ID="txtSubscriptionLists" runat="server" />
     </div>
+    <div class="dnnFormItem">
+        <dnn:label ID="lblValidationEndpoint" runat="server" />
+        <asp:TextBox ID="txtValidationEndpoint" runat="server" />
+    </div>
 
 </fieldset>
 

@@ -74,16 +74,7 @@ namespace Christoc.Modules.SubscriptionValidation
             {
                 var subscriptionModel = new SubscriptionModel(this.UserInfo.Profile.Telephone, SubscriptionModel.ParseLists(TabModuleSettings[SettingNames.SubscriptionLists].ToString()));
                 
-                if (string.IsNullOrWhiteSpace(this.UserInfo.Profile.Telephone))
-                    return false;
-
-                return await SubscriptionValidationService.ValidateUserSubscriptionAsync(subscriptionModel);
-
-                    //DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono no tiene una suscripción válida", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.YellowWarning);
-
-
-                    //this.UserInfo.Profile.SetProfileProperty("Telephone", "123");
-                    //DotNetNuke.UI.Skins.Skin.AddModuleMessage(this, "El teléfono está suscrito OK!", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.GreenSuccess);
+                return await subscriptionModel.IsSubscriptionValidAsync(new SubscriptionValidationService(base.TabModuleSettings[SettingNames.ValidationServiceEndpoint].ToString()));
 
 
             }catch(Exception ex)

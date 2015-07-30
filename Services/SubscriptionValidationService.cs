@@ -12,9 +12,16 @@ namespace Christoc.Modules.SubscriptionValidation.Services
 {
     public class SubscriptionValidationService
     {
-        private static readonly string ValidationServiceEndpoint = "http://146.82.89.83/le/dnn/dnn_suscstatus.asp?ani={PhoneNumber}&productos={Products}";
+        public static readonly string DefaultValidationServiceEndpoint = "http://146.82.89.83/le/dnn/dnn_suscstatus.asp?ani={PhoneNumber}&productos={Products}";
 
-        public static async Task<bool> ValidateUserSubscriptionAsync(SubscriptionModel model)
+        public string ValidationServiceEndpoint { get; set; }
+
+        public SubscriptionValidationService(string validationServicEndpoint)
+        {
+            ValidationServiceEndpoint = validationServicEndpoint;
+        }
+
+        public async Task<bool> ValidateUserSubscriptionAsync(SubscriptionModel model)
         {
             if (string.IsNullOrWhiteSpace(model.PhoneNumber) || string.IsNullOrWhiteSpace(model.SerializedList))
                 return false;

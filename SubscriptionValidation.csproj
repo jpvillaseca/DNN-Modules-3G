@@ -69,7 +69,7 @@
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Components\ItemController.cs" />
     <Compile Include="Components\Item.cs" />
-    <Compile Include="Components\SettingsNames.cs" />
+    <Compile Include="Components\SettingNames.cs" />
     <Compile Include="Components\SubscriptionModel.cs" />
     <Compile Include="Extensions\StringFormatExtensions.cs" />
     <Compile Include="Services\SubscriptionValidationService.cs" />

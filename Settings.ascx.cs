@@ -63,24 +63,14 @@ namespace Christoc.Modules.SubscriptionValidation
 
                     txtSubscriptionLists.Text = TabModuleSettings.Contains(SettingNames.SubscriptionLists) ? TabModuleSettings[SettingNames.SubscriptionLists].ToString() : string.Empty;
 
+                    txtValidationEndpoint.Text = TabModuleSettings.Contains(SettingNames.ValidationServiceEndpoint) ? TabModuleSettings[SettingNames.ValidationServiceEndpoint].ToString() : Services.SubscriptionValidationService.DefaultValidationServiceEndpoint;
+
                     Tabs = TabController.GetTabsByParent(-1, PortalId).OrderBy(p => p.TabName).ToList();
 
                     pageDropDown.DataSource = Tabs;
                     pageDropDown.DataBind();
 
                     pageDropDown.SelectedIndex = Tabs.IndexOf(Tabs.FirstOrDefault(t => t.TabID.ToString() == redirectPage)??Tabs.First());
-
-                    //Check for existing settings and use those on this page
-                    //Settings["SettingName"]
-
-                    /* uncomment to load saved settings in the text boxes
-                    if(Settings.Contains("Setting1"))
-                        txtSetting1.Text = Settings["Setting1"].ToString();
-			
-                    if (Settings.Contains("Setting2"))
-                        txtSetting2.Text = Settings["Setting2"].ToString();
-
-                    */
 
                 }
             }
@@ -110,6 +100,7 @@ namespace Christoc.Modules.SubscriptionValidation
 
                 modules.UpdateTabModuleSetting(TabModuleId, SettingNames.RedirectAddress, pageDropDown.SelectedValue);
                 modules.UpdateTabModuleSetting(TabModuleId, SettingNames.SubscriptionLists, txtSubscriptionLists.Text);
+                modules.UpdateTabModuleSetting(TabModuleId, SettingNames.ValidationServiceEndpoint, txtValidationEndpoint.Text);
             }
             catch (Exception exc) //Module failed to load
             {

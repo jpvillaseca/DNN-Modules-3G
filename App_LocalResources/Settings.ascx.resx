@@ -130,9 +130,15 @@
     <value>Redirección</value>
   </data>
   <data name="lblSubscriptionLists.Help" xml:space="preserve">
-    <value>Listas a validar de suscripción separadas por coma (1337,2014,...)</value>
+    <value>Productos a validar para la suscripción separados por coma (1337,2014,...)</value>
   </data>
   <data name="lblSubscriptionLists.Text" xml:space="preserve">
-    <value>Listas de suscripción</value>
+    <value>ID de productos</value>
+  </data>
+  <data name="lblValidationEndpoint.Help" xml:space="preserve">
+    <value>Para validar si el ani está suscrito a uno de los ID de producto</value>
+  </data>
+  <data name="lblValidationEndpoint.Text" xml:space="preserve">
+    <value>Servicio de validación de suscripción</value>
   </data>
 </root>
