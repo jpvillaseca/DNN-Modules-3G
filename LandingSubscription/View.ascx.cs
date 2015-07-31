@@ -37,12 +37,24 @@ namespace Christoc.Modules.LandingSubscription
     /// -----------------------------------------------------------------------------
     public partial class View : LandingSubscriptionModuleBase
     {
+        public string SelectedCountries { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!Page.IsPostBack)
             { 
                 try
                 {
+                    var moduleController = new ModuleController();
+
+                    lblJumbotronTitle.Text = (TabModuleSettings[SettingNames.JumbotronTitle] ?? LocalizeString("JumbotronDefaultTitle")).ToString();
+
+                    litJumbotronContent.Text = moduleController.ReadLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent) ?? string.Empty;
+
+                    btnSubmitPhone.Text = (TabModuleSettings[SettingNames.SubmitPhoneButton] ?? LocalizeString("SubmitForm")).ToString();
+
+                    SelectedCountries = (TabModuleSettings[SettingNames.SelectedCountries] ?? SettingNames.DefaultCountries).ToString();
+
                 }
                 catch (Exception exc) //Module failed to load
                 {

@@ -120,6 +120,9 @@
   <data name="EnterTelephone.Text" xml:space="preserve">
     <value>Ingrese su teléfono</value>
   </data>
+  <data name="JumbotronDefaultTitle.Text" xml:space="preserve">
+    <value>No configurado</value>
+  </data>
   <data name="SubmitForm.Text" xml:space="preserve">
     <value>Ingresar</value>
   </data>

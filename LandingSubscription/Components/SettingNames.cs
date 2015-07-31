@@ -12,5 +12,10 @@ namespace Christoc.Modules.LandingSubscription.Components
         public static string JumbotronContent { get { return "JumbotronContent"; } }
 
         public static string SubmitPhoneButton { get { return "SubmitPhoneButton"; } }
+
+        public static string SelectedCountries { get { return "SelectedCountries"; } }
+
+        public static string DefaultCountries { get { return "\"cl\", \"ar\", \"pe\", \"do\", \"mx\", \"sv\", \"hn\", \"bo\""; } }
+
     }
 }

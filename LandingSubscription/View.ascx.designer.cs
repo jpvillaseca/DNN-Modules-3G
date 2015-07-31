@@ -13,12 +13,30 @@ namespace Christoc.Modules.LandingSubscription {
     public partial class View {
         
         /// <summary>
-        /// CogLinkButton control.
+        /// lblJumbotronTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton CogLinkButton;
+        protected global::System.Web.UI.WebControls.Label lblJumbotronTitle;
+        
+        /// <summary>
+        /// litJumbotronContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litJumbotronContent;
+        
+        /// <summary>
+        /// btnSubmitPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSubmitPhone;
     }
 }
