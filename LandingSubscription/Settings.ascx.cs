@@ -60,6 +60,7 @@ namespace Christoc.Modules.LandingSubscription
                     if (TabModuleSettings.Contains(SettingNames.SubmitPhoneButton))
                         txtCallToActionPhone.Text = TabModuleSettings[SettingNames.SubmitPhoneButton].ToString();
 
+                    txtSelectedCountries.Text = (TabModuleSettings[SettingNames.SelectedCountries] ?? SettingNames.DefaultCountries).ToString();
 
                     htmlEditor.Text = module.ReadLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent);
                 }
@@ -84,6 +85,8 @@ namespace Christoc.Modules.LandingSubscription
                 module.UpdateTabModuleSetting(TabModuleId, SettingNames.JumbotronTitle, txtJumbotronTitle.Text);
 
                 module.UpdateTabModuleSetting(TabModuleId, SettingNames.SubmitPhoneButton, txtCallToActionPhone.Text);
+
+                module.UpdateTabModuleSetting(TabModuleId, SettingNames.SelectedCountries, txtSelectedCountries.Text);
 
                 module.UpdateLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent, htmlEditor.Text);
             }

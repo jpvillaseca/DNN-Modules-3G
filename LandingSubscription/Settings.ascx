@@ -20,10 +20,15 @@
         <asp:TextBox ID="txtCallToActionPhone" runat="server" />
     </div>
     <div class="dnnFormItem">
+        <dnn:label ID="lblSelectedCountries" runat="server" />
+        <asp:TextBox ID="txtSelectedCountries" runat="server" />
+    </div>
+    <div class="dnnFormItem">
         <dnn:label ID="lblJumbotronContent" runat="server" />
         <dnn:TextEditor ID="htmlEditor" runat="server" Height="400" Width="500"
             HtmlEncode="false" ChooseRender="false" DefaultMode="RICH" />
     </div>
 </fieldset>
+
 
 

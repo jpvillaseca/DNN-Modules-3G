@@ -12,21 +12,12 @@
 
 using System;
 using DotNetNuke.Entities.Modules;
+using System.Collections;
 
 namespace Christoc.Modules.LandingSubscription
 {
     public class LandingSubscriptionModuleBase : PortalModuleBase
     {
-        public int ItemId
-        {
-            get
-            {
-                var qs = Request.QueryString["tid"];
-                if (qs != null)
-                    return Convert.ToInt32(qs);
-                return -1;
-            }
-
-        }
+        public Hashtable TabModuleSettings { get { return base.ModuleConfiguration.TabModuleSettings; } }
     }
 }

@@ -49,6 +49,24 @@ namespace Christoc.Modules.LandingSubscription {
         protected global::System.Web.UI.WebControls.TextBox txtCallToActionPhone;
         
         /// <summary>
+        /// lblSelectedCountries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DotNetNuke.UI.UserControls.LabelControl lblSelectedCountries;
+        
+        /// <summary>
+        /// txtSelectedCountries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSelectedCountries;
+        
+        /// <summary>
         /// lblJumbotronContent control.
         /// </summary>
         /// <remarks>

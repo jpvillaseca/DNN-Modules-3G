@@ -138,4 +138,10 @@
   <data name="lblJumbotronTitle.Text" xml:space="preserve">
     <value>Título</value>
   </data>
+  <data name="lblSelectedCountries.Help" xml:space="preserve">
+    <value>El listado de países con código ISO, incluyendo comillas dobles: "CL", "AR", "PE"</value>
+  </data>
+  <data name="lblSelectedCountries.Text" xml:space="preserve">
+    <value>Países habilitados</value>
+  </data>
 </root>
