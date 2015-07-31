@@ -13,6 +13,7 @@
 using System;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Exceptions;
+using Christoc.Modules.LandingSubscription.Components;
 
 namespace Christoc.Modules.LandingSubscription
 {
@@ -51,18 +52,16 @@ namespace Christoc.Modules.LandingSubscription
             {
                 if (Page.IsPostBack == false)
                 {
-                    //Check for existing settings and use those on this page
-                    //Settings["SettingName"]
+                    var module = new ModuleController();
 
-                    /* uncomment to load saved settings in the text boxes
-                    if(Settings.Contains("Setting1"))
-                        txtSetting1.Text = Settings["Setting1"].ToString();
-			
-                    if (Settings.Contains("Setting2"))
-                        txtSetting2.Text = Settings["Setting2"].ToString();
+                    if (TabModuleSettings.Contains(SettingNames.JumbotronTitle))
+                        txtJumbotronTitle.Text = TabModuleSettings[SettingNames.JumbotronTitle].ToString();
 
-                    */
+                    if (TabModuleSettings.Contains(SettingNames.SubmitPhoneButton))
+                        txtCallToActionPhone.Text = TabModuleSettings[SettingNames.SubmitPhoneButton].ToString();
 
+
+                    htmlEditor.Text = module.ReadLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent);
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -80,16 +79,13 @@ namespace Christoc.Modules.LandingSubscription
         {
             try
             {
-                var modules = new ModuleController();
+                var module = new ModuleController();
 
-                //the following are two sample Module Settings, using the text boxes that are commented out in the ASCX file.
-                //module settings
-                //modules.UpdateModuleSetting(ModuleId, "Setting1", txtSetting1.Text);
-                //modules.UpdateModuleSetting(ModuleId, "Setting2", txtSetting2.Text);
+                module.UpdateTabModuleSetting(TabModuleId, SettingNames.JumbotronTitle, txtJumbotronTitle.Text);
 
-                //tab module settings
-                //modules.UpdateTabModuleSetting(TabModuleId, "Setting1",  txtSetting1.Text);
-                //modules.UpdateTabModuleSetting(TabModuleId, "Setting2",  txtSetting2.Text);
+                module.UpdateTabModuleSetting(TabModuleId, SettingNames.SubmitPhoneButton, txtCallToActionPhone.Text);
+
+                module.UpdateLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent, htmlEditor.Text);
             }
             catch (Exception exc) //Module failed to load
             {

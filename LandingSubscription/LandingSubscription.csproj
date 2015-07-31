@@ -66,6 +66,8 @@
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Components\ItemController.cs" />
     <Compile Include="Components\Item.cs" />
+    <Compile Include="Components\SettingNames.cs" />
+    <Compile Include="Extensions\LargeModuleSettingsExtensions.cs" />
     <Compile Include="LandingSubscriptionModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

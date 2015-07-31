@@ -3,4 +3,3 @@ C:\inetpub\dnn\bin\SubscriptionValidation.pdb
 C:\inetpub\dnn\DesktopModules\SubscriptionValidation\obj\Debug\SubscriptionValidation.dll
 C:\inetpub\dnn\DesktopModules\SubscriptionValidation\obj\Debug\SubscriptionValidation.pdb
 C:\inetpub\dnn\bin\SubscriptionValidation.dll.config
-C:\inetpub\dnn\DesktopModules\SubscriptionValidation\obj\Debug\SubscriptionValidation.csprojResolveAssemblyReference.cache
