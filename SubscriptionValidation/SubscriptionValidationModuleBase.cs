@@ -20,6 +20,17 @@ namespace Christoc.Modules.SubscriptionValidation
     {
         public Hashtable TabModuleSettings { get { return base.ModuleConfiguration.TabModuleSettings; } }
 
+        public string Referal
+        {
+            get
+            {
+                var qs = Request.QueryString["referal"];
+                if (qs != null)
+                    return qs;
+                return string.Empty;
+            }
+        }
+
         public int ItemId
         {
             get

@@ -12,5 +12,7 @@ namespace Christoc.Modules.SubscriptionValidation.Components
         public static string SubscriptionLists { get { return "SubscriptionLists"; } }
 
         public static string ValidationServiceEndpoint { get { return "ValidationServiceEndpoint"; } }
+
+        public static string ViralReferalCookie { get { return "ViralReferalCookie"; } }
     }
 }
