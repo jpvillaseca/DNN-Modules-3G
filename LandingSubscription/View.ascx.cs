@@ -19,6 +19,9 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.UI.Utilities;
+using Christoc.Modules.LandingSubscription.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Christoc.Modules.LandingSubscription
 {
@@ -55,6 +58,12 @@ namespace Christoc.Modules.LandingSubscription
 
                     SelectedCountries = (TabModuleSettings[SettingNames.SelectedCountries] ?? SettingNames.DefaultCountries).ToString();
 
+                    //Set cookies if viral metadata is specified
+                    if (!string.IsNullOrWhiteSpace(GetQueryStringParameter("referal")))
+                        base.Referal = GetQueryStringParameter("referal");
+
+                    if (!string.IsNullOrWhiteSpace(GetQueryStringParameter("viral")))
+                        base.ViralToken = GetQueryStringParameter("viral");
                 }
                 catch (Exception exc) //Module failed to load
                 {
@@ -65,11 +74,21 @@ namespace Christoc.Modules.LandingSubscription
 
         protected void UpdateForm_Click(object sender, EventArgs e)
         {
-            var mobile = Request["mobilenumber"];
+            var phoneNumber = Request["mobilenumber"];
 
+            //Update phone on user profile
             if(!string.IsNullOrWhiteSpace(this.UserInfo.Username))
-                this.UserInfo.Profile.SetProfileProperty("Telephone", mobile);
+                this.UserInfo.Profile.SetProfileProperty("Telephone", phoneNumber);
 
+            //Execute service callback if any
+            var services = (TabModuleSettings[SettingNames.ServiceOnSubmit] ?? string.Empty).ToString();
+            if (string.IsNullOrWhiteSpace(services))
+                return;
+
+            LandingService landService = new LandingService(this.UserInfo.Username, base.Referal, phoneNumber, base.ViralToken);
+
+            foreach (var service in services.Split('|'))
+                landService.ExecuteLandingService(service);
         }
 
     }

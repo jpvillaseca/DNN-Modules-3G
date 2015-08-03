@@ -17,5 +17,12 @@ namespace Christoc.Modules.LandingSubscription.Components
 
         public static string DefaultCountries { get { return "\"cl\", \"ar\", \"pe\", \"do\", \"mx\", \"sv\", \"hn\", \"bo\""; } }
 
+        public static string ServiceOnSubmit { get { return "ServiceOnSubmit"; } }
+        
+        public static string ViralReferalCookie { get { return "ViralReferalCookie"; } }
+
+        public static string ViralTokenCookie { get { return "ViralTokenCookie"; } }
+
+
     }
 }

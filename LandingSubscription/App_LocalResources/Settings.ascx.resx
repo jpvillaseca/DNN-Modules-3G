@@ -144,4 +144,11 @@
   <data name="lblSelectedCountries.Text" xml:space="preserve">
     <value>Países habilitados</value>
   </data>
+  <data name="lblServiceOnSubmit.Help" xml:space="preserve">
+    <value>Servicios a llamar cuando un usuario haga click en el botón de ingresar teléfono. Pueden separarse por pipes |, como http://servicio1.com|http://servicio2.com
+Se puede usar: {PhoneNumber},{Referal},{Username},{ViralToken}</value>
+  </data>
+  <data name="lblServiceOnSubmit.Text" xml:space="preserve">
+    <value>Servicios de suscripción</value>
+  </data>
 </root>

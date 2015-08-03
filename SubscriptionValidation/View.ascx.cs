@@ -49,6 +49,10 @@ namespace Christoc.Modules.SubscriptionValidation
                     dnnView.Visible = true;
                     notSavedWarning.Visible = !TabModuleSettings.ContainsKey(SettingNames.RedirectAddress);
                     lblRedirect.Text = TabModuleSettings.ContainsKey(SettingNames.RedirectAddress) ? TabModuleSettings[SettingNames.RedirectAddress].ToString() + (TabModuleSettings.ContainsKey(SettingNames.SubscriptionLists) ? " (" + TabModuleSettings[SettingNames.SubscriptionLists].ToString() : string.Empty) + ")" : string.Empty;
+
+                    //Set cookie if viral metadata is specified
+                    if (!string.IsNullOrWhiteSpace(base.Referal))
+                        Response.Cookies.Add(new System.Web.HttpCookie(SettingNames.ViralReferalCookie, base.Referal));
                 }
                 else
                 {

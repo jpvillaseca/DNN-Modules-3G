@@ -62,6 +62,8 @@ namespace Christoc.Modules.LandingSubscription
 
                     txtSelectedCountries.Text = (TabModuleSettings[SettingNames.SelectedCountries] ?? SettingNames.DefaultCountries).ToString();
 
+                    txtServiceOnSubmit.Text = (TabModuleSettings[SettingNames.ServiceOnSubmit] ?? string.Empty).ToString();
+
                     htmlEditor.Text = module.ReadLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent);
                 }
             }
@@ -83,10 +85,9 @@ namespace Christoc.Modules.LandingSubscription
                 var module = new ModuleController();
 
                 module.UpdateTabModuleSetting(TabModuleId, SettingNames.JumbotronTitle, txtJumbotronTitle.Text);
-
                 module.UpdateTabModuleSetting(TabModuleId, SettingNames.SubmitPhoneButton, txtCallToActionPhone.Text);
-
                 module.UpdateTabModuleSetting(TabModuleId, SettingNames.SelectedCountries, txtSelectedCountries.Text);
+                module.UpdateTabModuleSetting(TabModuleId, SettingNames.ServiceOnSubmit, txtServiceOnSubmit.Text);
 
                 module.UpdateLargeTabModuleSetting(TabModuleSettings, TabModuleId, SettingNames.JumbotronContent, htmlEditor.Text);
             }
