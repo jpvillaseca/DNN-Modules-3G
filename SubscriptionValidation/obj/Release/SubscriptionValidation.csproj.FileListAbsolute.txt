@@ -2,3 +2,4 @@ C:\inetpub\dnn\bin\SubscriptionValidation.dll
 C:\inetpub\dnn\bin\SubscriptionValidation.pdb
 C:\inetpub\dnn\DesktopModules\SubscriptionValidation\obj\Release\SubscriptionValidation.dll
 C:\inetpub\dnn\DesktopModules\SubscriptionValidation\obj\Release\SubscriptionValidation.pdb
+C:\inetpub\dnn\bin\SubscriptionValidation.dll.config

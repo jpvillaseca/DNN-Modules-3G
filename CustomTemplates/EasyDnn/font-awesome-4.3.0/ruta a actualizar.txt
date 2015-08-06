@@ -1,0 +1,1 @@
+/httpdocs/Portals/_default/Skins/Ozone/common
