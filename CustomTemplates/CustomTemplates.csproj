@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0FD8AF2E-367D-4E0D-A437-69DEB8486A31}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Setup\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EasyDnn\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="EasyDnn\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="EasyDnn\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="EasyDnn\font-awesome-4.3.0\ruta a actualizar.txt" />
+    <Content Include="EasyDnn\Templates\Details_Article_Default_ViralCore.htm" />
+    <Content Include="EasyDnn\Templates\Details_Article_Default_CustomShare.htm" />
+    <Content Include="EasyDnn\Templates\DigevoViral\ActivateToken.html" />
+    <Content Include="EasyDnn\Templates\DigevoViral\ConfigToken.html" />
+    <Content Include="EasyDnn\Templates\DigevoViral\DnnViralDemo.html" />
+    <Content Include="EasyDnn\Templates\DigevoViral\ShareToken.html" />
+    <Content Include="EasyDnn\Templates\DigevoViral\SrcToken.html" />
+    <Content Include="EasyDnn\Templates\readme.txt" />
+    <Content Include="Setup\SQL\isusersuscproducto.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EasyDnn\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <None Include="EasyDnn\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="EasyDnn\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <None Include="EasyDnn\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="EasyDnn\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\animated.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\bordered-pulled.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\core.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\fixed-width.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\font-awesome.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\icons.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\larger.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\list.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\mixins.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\path.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\rotated-flipped.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\stacked.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\less\variables.less" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\font-awesome.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_animated.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_bordered-pulled.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_core.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_fixed-width.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_icons.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_larger.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_list.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_mixins.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_path.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_stacked.scss" />
+    <None Include="EasyDnn\font-awesome-4.3.0\scss\_variables.scss" />
+  </ItemGroup>
+</Project>

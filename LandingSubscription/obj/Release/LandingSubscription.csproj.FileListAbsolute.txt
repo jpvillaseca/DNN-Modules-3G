@@ -2,3 +2,4 @@ C:\inetpub\dnn\bin\LandingSubscription.dll
 C:\inetpub\dnn\bin\LandingSubscription.pdb
 C:\inetpub\dnn\DesktopModules\LandingSubscription\obj\Release\LandingSubscription.dll
 C:\inetpub\dnn\DesktopModules\LandingSubscription\obj\Release\LandingSubscription.pdb
+C:\inetpub\dnn\bin\LandingSubscription.dll.config
