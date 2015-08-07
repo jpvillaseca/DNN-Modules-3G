@@ -28,7 +28,13 @@
     }
 
     function getInviteUrl() {
-        return encodeURIComponent(window.location.href);
+
+        var url = window.location.href;
+        //EasyDNN article detail shortening:
+        if (url.lastIndexOf("ArticleID") > -1)
+            url = url.substr(0, url.lastIndexOf('/'));
+
+        return encodeURIComponent(url);
     }
 
     function getDescription() {
@@ -51,7 +57,7 @@
         if (viralEngineEnabled)
             return encodeURIComponent(viralCoreEngineService.replace('{webpage}', encodeURIComponent(url)).replace('{user}', viralUser).replace('{medium}', medium).replace('{campaign}', viralCampaign).replace('{shareurl}', shareUrl));
         else
-            return url.replace('{shareurl}', shareUrl);
+            return encodeURIComponent(url.replace('{shareurl}', shareUrl))
     }
 
     $(document).ready(function () {

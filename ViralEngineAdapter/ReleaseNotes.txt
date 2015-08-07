@@ -8,12 +8,14 @@
 <div class="License">
 	<h3>About the ViralEngineAdapter</h3>
 	<p class="Owner">
-		<b>Version 00.01.01</b><br /><br />
+		<b>Version 00.01.02</b><br /><br />
 	</p>
 	<p>Release inicial</p>
 	
 	<h4>Bug Fixes</h4>
 	<ul>
-			<li>No</li>
+			<li>00.01.02: Bugfix Twitter</li>
+			<li>00.01.02: Url shortenning for EasyDNN</li>
+			<li>00.01.01: Initial release</li>
 	</ul>
 </div>
