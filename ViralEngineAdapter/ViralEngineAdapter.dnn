@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="ViralEngineAdapter" type="Module" version="00.01.02">
+    <package name="ViralEngineAdapter" type="Module" version="00.01.03">
       <friendlyName>ViralEngineAdapter</friendlyName>
       <description>ViralEngineAdapter module</description>
       <iconFile>Images/icon_extensions.gif</iconFile>

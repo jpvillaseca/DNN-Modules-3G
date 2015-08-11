@@ -31,7 +31,7 @@
 
         var url = window.location.href;
         //EasyDNN article detail shortening:
-        if (url.lastIndexOf("ArticleID") > -1)
+        if (url.lastIndexOf("ArticleID") > -1 && url.lastIndexOf(".aspx") > -1)
             url = url.substr(0, url.lastIndexOf('/'));
 
         return encodeURIComponent(url);

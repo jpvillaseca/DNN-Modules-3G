@@ -2,3 +2,4 @@ C:\inetpub\dnn\bin\ViralEngineAdapter.dll
 C:\inetpub\dnn\bin\ViralEngineAdapter.pdb
 C:\inetpub\dnn\DesktopModules\ViralEngineAdapter\obj\Release\ViralEngineAdapter.dll
 C:\inetpub\dnn\DesktopModules\ViralEngineAdapter\obj\Release\ViralEngineAdapter.pdb
+C:\inetpub\dnn\DesktopModules\ViralEngineAdapter\obj\Release\ViralEngineAdapter.csprojResolveAssemblyReference.cache
