@@ -13,7 +13,9 @@
 /RazorModules
 /SocialGroups
 /EasyDNNstyleWizard
+/SMSGo.GoogleAnalytics
 *.suo
 *.suo
 *.suo
 DnnModules.v12.suo
+CustomTemplates/bin/x86/Debug/CustomTemplates.vshost.exe
