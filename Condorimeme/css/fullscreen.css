@@ -1,0 +1,17 @@
+.eds_headerContainer,
+.edsFooterBackground,
+.edsCopyrightBg
+{
+	display: none;
+}
+
+body
+{
+	background: none !important;
+}
+
+.EasyDNNSkin_Ozone
+{
+	box-shadow: none !important;
+	border: 0px none !important;
+}

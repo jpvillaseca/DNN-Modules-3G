@@ -1,0 +1,644 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.condorimemes
+{
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 15pt;
+    color: #2f2f2f;
+	position: relative;
+	overflow: hidden;
+}
+
+@media(max-width: 960px)
+{
+    .condorimemes
+	{
+        font-size: 13pt;
+    }
+}
+
+.table, .cell
+{
+    width: 100%;
+    height: 100%;
+}
+
+.table
+{
+    display: table;
+}
+
+.cell
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.condorimemes footer
+{
+    text-align: right;
+    font-size: 80%;
+    color: #FFF;
+    margin-bottom: 0.5em;
+}
+
+/* Columns */
+.condorimemes .full
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.condorimemes .left, .condorimemes .right
+{
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    vertical-align: top;
+}
+
+.condorimemes .text_center
+{
+    text-align: center !important;
+}
+
+.condorimemes .v_middle
+{
+    vertical-align: middle;
+}
+
+/* Section */
+.condorimemes section 
+{
+    width: 100%;
+}
+
+.condorimemes section:not(:last-of-type)
+{
+    margin-bottom: 1em;
+}
+
+.condorimemes section header 
+{
+    padding: 0.5em 0 1.2em 0;
+    text-align: center;
+    color: #FFF;
+}
+
+.condorimemes section header h1,
+.condorimemes section header h2
+{
+    margin: 0 auto;
+    padding: 0 0.75em;
+}
+
+.condorimemes section header h1
+{
+    display: inline-block;
+    font-weight: 300;
+    border-bottom: 2px dashed;
+}
+
+.condorimemes section header h1 > img
+{
+    display: block;
+}
+
+.condorimemes section header h2
+{
+    display: block;
+    font-weight: 300;
+    font-size: 90%;
+}
+
+.condorimemes section content
+{
+    position: relative;
+    background-color: #FFF;
+    border-radius: 0.5em;
+    display: block;
+}
+
+.condorimemes section content:not(:first-of-type)
+{
+    margin-top: 1em;
+}
+
+.condorimemes section content > div:nth-of-type(n):not(:last-of-type)
+{
+    margin-bottom: 0.5em;
+}
+
+/* Title */
+.condorimemes .title { margin-bottom: 0.5em; text-align: left }
+
+.condorimemes .title h1, 
+.condorimemes .title span
+{
+    vertical-align: middle;
+}
+.condorimemes .title h1
+{
+    display: inline-block;
+    color: #FFF;
+    background-color: #C81704;
+    border-radius: 50%;
+    padding: 0 0.4em;
+    font-size: 140%;
+    font-weight: 300;
+}
+
+.condorimemes .title span
+{
+    font-weight: 400;
+    margin-left: 0.2em;
+}
+
+/* Gallery */
+.gallery_container
+{
+    position: relative;
+    white-space: normal;
+}
+
+.gallery_container .gallery
+{
+    display: block;
+    margin: 0 auto;
+    border: 2px dashed #C81704;
+    padding: 0.2em;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 464px;
+}
+
+.gallery_container .gallery .img
+{
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    height: 0;
+    padding-bottom: 32%;
+}
+
+.gallery_container .gallery .img img
+{
+    width: 100%;
+    border: 5px solid #FFF;
+    transition: border-color 0.15s ease-out;
+}
+
+.gallery_container .gallery .img img:hover
+{
+    cursor: pointer;
+    border-color: #C81704;
+}
+
+/* Canvas */
+.meme_container
+{
+    position: relative;
+}
+
+.canvas_container .canvas_frame
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px dashed #C81704;
+    padding: 0.2em;
+}
+
+.canvas_container img { display: none; }
+
+/* Controls & URL */
+.controls
+{
+    margin-top: 0.4em;
+}
+
+.url
+{
+    margin-bottom: 0.4em;
+}
+
+.controls input,
+.url input
+{
+    border: 2px dashed #C81704;
+    padding: 0.2em 0.5em;
+    width: 414px;
+}
+
+.counter
+{
+    color: #808080;
+    font-size: 75%;
+    text-align: right;
+    width: 414px;
+    margin: 0 auto;
+}
+
+.counter #total
+{
+    font-weight: 400;
+}
+
+/* Overlay */
+.condorimemes .overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+	opacity: 0.8;
+}
+
+.condorimemes .overlay.solid
+{
+    background-color: #FFF;
+	opacity: 1;
+}
+
+.condorimemes .overlay.hidden
+{
+    display: none;
+}
+
+.condorimemes .overlay.loading
+{
+    background-image: url('/DesktopModules/Digevo/Digevo.Condorimeme/img/loading.gif');
+    background-position: center;
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
+
+.condorimemes .overlay.loading2
+{
+    background-image: url('/DesktopModules/Digevo/Digevo.Condorimeme/img/loading2.gif');
+    background-position: 50% 30%;
+    background-size: 160px 20px;
+    background-repeat: no-repeat;
+}
+
+.condorimemes .overlay.sup
+{
+    z-index: 3;
+}
+
+.condorimemes .overlay span
+{
+    font-size: 75%;
+    color: #FF8631;
+    font-weight: 400;
+}
+
+/* Generate */
+.make
+{
+    background-color: #353535;
+    display: inline-block;
+    padding: 0.4em 1em;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out; 
+}
+
+.make > span:first-of-type
+{
+    color: #FFF;
+    font-size: 110%;
+    vertical-align: middle;
+}
+
+.make > span:nth-of-type(2)
+{
+    font-size: 90%;
+    color: #FFF;
+    margin-left: 8px;
+    font-weight: 300;
+}
+
+.make:hover
+{
+    background-color: #C81704;
+}
+
+.make_link
+{
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    color: #FF8631;
+    font-size: 75%;
+    font-weight: 400;
+    padding: 0.2em 0.3em;
+    border-radius: 2px;
+    transition: background-color 0.15s ease-out, color 0.15s ease-in-out; 
+}
+
+.make_link:hover
+{
+    color: #FFF;
+    background-color: #C81704;
+    border-bottom-color: #FFF;
+    border-bottom-style: solid;
+}
+
+/* Social & Download */
+.rel_container
+{
+    position: relative;
+    line-height: 1.6em;
+    height: 68px;
+    margin-top: -0.4em;
+}
+
+.social,
+.download
+{
+    display: inline-block;
+    margin: 0.5em 0;
+}
+
+.social div,
+.download div
+{
+    display: inline-block;
+    padding: 0.3em;
+    margin: 0 0.15em;
+    color: #FFF;
+    font-size: 150%;
+    border-radius: 4px;
+    transition: background-color 0.15s ease-out; 
+}
+
+.social div:hover,
+.download div:hover
+{
+    background-color: #C81704;
+    cursor: pointer;
+}
+
+.social .facebook
+{
+    background-color: #1B38E0;
+}
+
+.social .twitter
+{
+    background-color: #13c8e1;
+}
+
+.social .whatsapp
+{
+    background-color: #069f59;
+}
+
+.download .device
+{
+    background-color: #353535;
+    padding: 0.2em 0.45em 0.4em 0.45em;
+}
+
+.download .device a
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.download .device a > span:first-of-type
+{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.download .device a > span:nth-of-type(2)
+{
+    font-size: 60%;
+    vertical-align: middle;
+    padding: 0 0.2em 0.1em 0;
+}
+
+/* OG Meme */
+.og_container
+{
+
+}
+
+.og_container > span:first-of-type
+{
+    color: #C81704;
+    margin-right: 10px;
+    font-size: 120%;
+    vertical-align: bottom;
+}
+
+.og_container .og_frame
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px dashed #C81704;
+    padding: 0.2em;
+}
+
+.og_container .meta > span
+{
+    font-size: 68%;
+    color: #898989;
+}
+
+.goto
+{
+    margin-top: 2em;
+}
+
+.goto .factory
+{
+    display: inline-block;
+    color: #FFF;
+    background-color: #C81704;
+    padding: 0.8em 1em;
+    border-radius: 6px;
+    border: 2px dashed #C81704;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out; 
+}
+
+.goto .factory:hover
+{
+    background-color: #FFF;
+    color: #C81704;
+}
+
+.goto .factory > span:first-of-type
+{
+    font-size: 140%;
+    vertical-align: middle;
+    margin-right: 0.4em;
+}
+
+.goto .factory > span:nth-of-type(2) 
+{
+    vertical-align: middle;
+}
+
+.goback
+{
+    text-align: right;
+    margin: -1em 0.35em 0 0;
+    color: #FFF;
+    display: none;
+    cursor: pointer;
+}
+
+.goback .preview
+{
+    display: inline-block;
+    padding: 0.2em 0.5em 0 0.5em;
+	color: #C0C0C0;
+    border-left: 1px dashed;
+    border-top: 1px dashed;
+    border-right: 1px dashed;
+    border-bottom: 0 none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+.goback .preview:hover
+{
+    background-color: #FFF;
+    color: #C81704;
+    border-color: #FFF;
+}
+
+.goback .preview:hover > span:nth-of-type(2)
+{
+    border-bottom: 1px dotted;
+}
+
+.goback .preview > span:first-of-type
+{
+    margin-right: 0.3em;
+    vertical-align: top;
+}
+
+.goback .preview > span:nth-of-type(2)
+{
+    font-size: 77%;
+    vertical-align: top;
+}
+
+/* History */
+.history_container
+{
+    width: 1140px;
+    overflow: hidden;
+	white-space: nowrap;
+	border: 2px dashed #C81704;
+	margin: 0 auto;
+}
+
+.history_container ul { font-size: 0; margin: 0; padding: 0; }
+
+.history_container li
+{
+    display: inline-block;
+    width: 162px !important;
+    height: auto;
+}
+
+.history_container img:hover 
+{
+    border-color: #C81704;
+}
+
+.history_container img
+{
+    width: 100% !important;
+    height: 100%;
+    border: 5px solid #FFF;
+    transition: border-color 0.15s ease-out;
+}
+
+#meme {
+	width: 100%;
+	display: inline-block;
+}
+
+@media(max-width: 1199px)
+{
+	.meme_container, .history_container
+	{
+		width: 96vw;
+	}
+
+	.condorimemes, .condorimemes .left, .condorimemes .right,
+	.condorimemes section header h1 > img
+	{
+		width: 100%;
+	}
+}
+
+@media(max-width: 450px)
+{
+	.condorimemes * {
+		width: 90vw !important;
+	}
+	
+	.condorimemes .og_frame img,
+	.condorimemes section header h1 > img,
+	.condorimemes .social span,
+	.condorimemes .gallery_container .gallery .img img	{
+		width: 100% !important;
+	}
+	
+	.condorimemes .social div, .condorimemes .download div
+	{
+		width: 99% !important;
+	}
+	
+	.condorimemes .fa-download, 
+	.condorimemes .fa-asterisk,
+	.condorimemes .fa-angle-double-up,
+	.condorimemes .fa-magic,
+	.condorimemes .title h1,
+	.goback .preview
+	{
+		width: auto !important;
+	}
+	
+	.gallery_container .gallery .img
+	{
+		width: 49% !important;
+		padding-bottom: 49%;
+	}
+	
+	.condorimemes .canvas_container canvas
+	{
+		width: 87.5vw !important;
+	}
+	
+	.condorimemes .gallery
+	{
+		max-height: 384px;
+	}
+}
