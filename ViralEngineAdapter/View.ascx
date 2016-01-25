@@ -57,7 +57,7 @@
         if (viralEngineEnabled)
             return encodeURIComponent(viralCoreEngineService.replace('{webpage}', encodeURIComponent(url)).replace('{user}', viralUser).replace('{medium}', medium).replace('{campaign}', viralCampaign).replace('{shareurl}', shareUrl));
         else
-            return encodeURIComponent(url.replace('{shareurl}', shareUrl))
+            return encodeURIComponent(url.replace('{shareurl}', shareUrl));
     }
 
     $(document).ready(function () {
