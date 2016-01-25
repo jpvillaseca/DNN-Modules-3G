@@ -1,0 +1,7 @@
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\obj\Debug\MobilePaymentProcessor.Transbank.csprojResolveAssemblyReference.cache
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\bin\Debug\Intergrup.Core4.Soap.dll
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\bin\Debug\Microsoft.Web.Services3.dll
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\bin\Debug\MobilePaymentProcessor.Transbank.dll
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\bin\Debug\MobilePaymentProcessor.Transbank.pdb
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\obj\Debug\MobilePaymentProcessor.Transbank.dll
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor.Transbank\obj\Debug\MobilePaymentProcessor.Transbank.pdb

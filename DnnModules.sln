@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{5EE0932B-FEDE-4FE6-A00A-44E01C747669}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +17,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTemplates", "CustomTemplates\CustomTemplates.csproj", "{0FD8AF2E-367D-4E0D-A437-69DEB8486A31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViralEngineAdapter", "ViralEngineAdapter\ViralEngineAdapter.csproj", "{094B0B97-0E68-49D6-8750-9EE868B79CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePaymentProcessor", "MobilePaymentProcessor\MobilePaymentProcessor.csproj", "{84479E8A-BB39-4EF1-9874-F056C1D3D341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePaymentProcessor.Transbank", "MobilePaymentProcessor.Transbank\MobilePaymentProcessor.Transbank.csproj", "{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +58,22 @@ Global
 		{094B0B97-0E68-49D6-8750-9EE868B79CA5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{094B0B97-0E68-49D6-8750-9EE868B79CA5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{094B0B97-0E68-49D6-8750-9EE868B79CA5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{84479E8A-BB39-4EF1-9874-F056C1D3D341}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5044C9F6-5997-45F6-8C48-C1CFE1C59F56}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

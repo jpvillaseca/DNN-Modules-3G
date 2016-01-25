@@ -1,0 +1,5 @@
+C:\inetpub\dnn\bin\MobilePaymentProcessor.dll
+C:\inetpub\dnn\bin\MobilePaymentProcessor.pdb
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor\obj\Debug\MobilePaymentProcessor.csprojResolveAssemblyReference.cache
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor\obj\Debug\MobilePaymentProcessor.dll
+C:\inetpub\dnn\DesktopModules\MobilePaymentProcessor\obj\Debug\MobilePaymentProcessor.pdb

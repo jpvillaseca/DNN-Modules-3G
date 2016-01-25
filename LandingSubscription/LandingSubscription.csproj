@@ -160,7 +160,7 @@
           </DevelopmentServerVPath>
           <IISUrl>http://dnndev.me/desktopmodules/LandingSubscription</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnndev.me</IISAppRootUrl>
+          <IISAppRootUrl>http://dnndev.me:666</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
